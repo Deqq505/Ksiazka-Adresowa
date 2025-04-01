@@ -49,6 +49,10 @@
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/Microsoft.Maui.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/Microsoft.Maui.Essentials.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/Microsoft.Maui.Graphics.dll
+/Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/SQLite-net.dll
+/Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/SQLitePCLRaw.batteries_v2.dll
+/Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/SQLitePCLRaw.core.dll
+/Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/SQLitePCLRaw.provider.sqlite3.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/Ksiazka-Adresowa.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/Microsoft.CSharp.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/Microsoft.VisualBasic.Core.dll

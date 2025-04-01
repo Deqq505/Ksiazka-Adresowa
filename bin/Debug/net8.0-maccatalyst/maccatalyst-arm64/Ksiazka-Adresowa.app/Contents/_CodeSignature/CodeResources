@@ -51,14 +51,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mUegtUkooXl50y7gEvss9Qxbkx7mQPQZkEM+2CXz8Eg=
+			Z+N17TmWNC0gT+t4naABX8D4oyuDBRLHPGZQ2y+klGk=
 			</data>
 		</dict>
 		<key>MonoBundle/Ksiazka-Adresowa.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J1AVLoOxMeRqfwLrOpbUlqEvf4c+cjRAAtI77+EXt7k=
+			6madnR8hx8u+Rbz51dxhZGRfN7QG+ZJ93tm0AvbstyE=
 			</data>
 		</dict>
 		<key>MonoBundle/Microsoft.CSharp.dll</key>
@@ -213,6 +213,34 @@
 			<key>hash2</key>
 			<data>
 			Humw2mRFv7MndeTzm3RbWmkJWBWFNyCszWXU/I7yeUU=
+			</data>
+		</dict>
+		<key>MonoBundle/SQLite-net.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			rm1BB75z+OOwopKzzcfLklPxfAQcjdpq/v26Gk+FJ1A=
+			</data>
+		</dict>
+		<key>MonoBundle/SQLitePCLRaw.batteries_v2.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gszoDBXO4Dwor1Scp/WrnWq3s6EMynck+sVXomAOlrI=
+			</data>
+		</dict>
+		<key>MonoBundle/SQLitePCLRaw.core.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PS7Y4YbxJPmI69tF0DVBhbQkNXviQzu6ADOrnsMb0ls=
+			</data>
+		</dict>
+		<key>MonoBundle/SQLitePCLRaw.provider.e_sqlite3.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IymQyDcq/zBXTu+cwoC0hu5vOfimb4PqSV3Q266YdAw=
 			</data>
 		</dict>
 		<key>MonoBundle/System.AppContext.dll</key>
@@ -772,7 +800,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ig5w1J+hFh+av9gMAyNKsQTIXr5WLDQal54HJNeLKVo=
+			akOvqPcx+V9mQhf+OxgFbqM+iqO+uY//o0BS/bu9hIA=
 			</data>
 		</dict>
 		<key>MonoBundle/System.Private.CoreLib.dll</key>
@@ -1353,7 +1381,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8rYTVwMy+uGRBHbjpmWP9ykSpNjaief1YTr/5qXDib8=
+			zRH0LbInmc9Uh/dznE0w3hpG6kASHsipRQTS36TE25U=
 			</data>
 		</dict>
 		<key>MonoBundle/ar/Microsoft.Maui.Controls.resources.dll</key>
@@ -1480,6 +1508,13 @@
 			<key>hash2</key>
 			<data>
 			mB+rfjUPmBvG4t0cXauTh5ZjZQC3ENXzkZ9SGH2KtCQ=
+			</data>
+		</dict>
+		<key>MonoBundle/libe_sqlite3.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0MLSn1cX1UH7mFr3ynYhbTjD5v58clzSKG/pl3FGojI=
 			</data>
 		</dict>
 		<key>MonoBundle/ms/Microsoft.Maui.Controls.resources.dll</key>
