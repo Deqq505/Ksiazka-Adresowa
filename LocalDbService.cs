@@ -10,12 +10,17 @@ public class LocalDbService
     public LocalDbService()
     {
         _connection = new SQLiteAsyncConnection(Path.Combine(FileSystem.AppDataDirectory, DB_NAME));
-        _connection.CreateTableAsync<Customer>();
+        InitializeDatabase();
+    }
+
+    private async Task InitializeDatabase()
+    {
+        await _connection.CreateTableAsync<Customer>();
     }
 
     public async Task<List<Customer>> GetCustomers()
     {
-        return await _connection.Table<Customer>().ToListAsync();
+        return await _connection.Table<Customer>().OrderBy(c => c.CustomerName).ToListAsync();
     }
 
     public async Task<Customer> GetById(int id)

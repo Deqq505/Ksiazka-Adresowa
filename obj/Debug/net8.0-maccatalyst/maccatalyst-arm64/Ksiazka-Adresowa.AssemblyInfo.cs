@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ksiazka-Adresowa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+85086f19dd807b99671a75361c67ecb8c600a3c9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+64aaa008d0bce4f50c75dcd8cd75109c1d0d4186")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ksiazka-Adresowa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ksiazka-Adresowa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
