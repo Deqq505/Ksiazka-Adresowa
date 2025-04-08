@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Ksiazka_Adresowa.Converters;
 
 namespace Ksiazka_Adresowa;
 
@@ -15,8 +16,14 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
+        
         builder.Services.AddSingleton<LocalDbService>();
         builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddTransient<EditContactPage>();
+        builder.Services.AddTransient<ContactDetailPage>();
+
+        
+        builder.Services.AddSingleton<CountToVisibilityConverter>();
 
 #if DEBUG
         builder.Logging.AddDebug();

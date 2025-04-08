@@ -1,73 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:Ksiazka_Adresowa.Converters"
              x:Class="Ksiazka_Adresowa.MainPage"
-             Title="Książka Adresowa"
-             BackgroundColor="{DynamicResource PageBackgroundColor}">
+             Title="Książka Adresowa">
 
-    <Grid RowDefinitions="Auto, *, Auto" ColumnDefinitions="*" Padding="10" RowSpacing="10">
+    <ContentPage.Resources>
+        <converters:CountToVisibilityConverter x:Key="CountToVisibilityConverter"/>
+    </ContentPage.Resources>
 
-       
-        <Frame Grid.Row="0" CornerRadius="10" Padding="15" BackgroundColor="{DynamicResource CardBackgroundColor}">
-            <VerticalStackLayout Spacing="10">
-                <Label Text="Dodaj/Edytuj kontakt" FontSize="18" FontAttributes="Bold" TextColor="{DynamicResource PrimaryTextColor}"/>
+    <Grid RowDefinitions="*,Auto" ColumnDefinitions="*" Padding="10">
+        
+        <StackLayout Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" 
+                     IsVisible="{Binding Source={x:Reference ListView}, Path=ItemsSource.Count, Converter={StaticResource CountToVisibilityConverter}}">
+            <Label Text="Brak kontaktów" FontSize="20" HorizontalOptions="Center"/>
+            <Label Text="Dodaj nowy kontakt, klikając przycisk poniżej" FontSize="14" HorizontalOptions="Center"/>
+        </StackLayout>
 
-                <Entry x:Name="nameEntryField" Placeholder="Imię i nazwisko*" ClearButtonVisibility="WhileEditing" />
-                <Entry x:Name="emailEntryField" Placeholder="Email" Keyboard="Email" ClearButtonVisibility="WhileEditing" />
-                <Entry x:Name="mobileEntryField" Placeholder="Telefon*" Keyboard="Telephone" ClearButtonVisibility="WhileEditing" />
-                <Entry x:Name="addressEntryField" Placeholder="Adres" ClearButtonVisibility="WhileEditing" />
-                <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
-                    <Entry x:Name="cityEntryField" Placeholder="Miasto" Grid.Column="0" ClearButtonVisibility="WhileEditing" />
-                    <Entry x:Name="postalCodeEntryField" Placeholder="Kod pocztowy" Grid.Column="1" ClearButtonVisibility="WhileEditing" />
-                </Grid>
-                <Editor x:Name="notesEntryField" Placeholder="Notatki" AutoSize="TextChanges" MinimumHeightRequest="60" />
-
-                <Button x:Name="saveButton" Text="Zapisz" Clicked="saveButton_Clicked"
-                        BackgroundColor="{DynamicResource PrimaryColor}" TextColor="White" CornerRadius="5" />
-            </VerticalStackLayout>
-        </Frame>
-
-        <!-- Lista kontaktów -->
-        <CollectionView x:Name="ListView" Grid.Row="1" SelectionMode="None">
+        <CollectionView x:Name="ListView" Grid.Row="0" SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="15" CornerRadius="10" Margin="0,0,0,10" BackgroundColor="{DynamicResource CardBackgroundColor}">
+                    <Frame Padding="15" CornerRadius="10" Margin="0,0,0,10">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnItemTapped" />
+                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=ItemTappedCommand}" 
+                                                 CommandParameter="{Binding .}"/>
                         </Frame.GestureRecognizers>
                         <VerticalStackLayout Spacing="5">
-                            <Label Text="{Binding CustomerName}" FontSize="16" FontAttributes="Bold" TextColor="{DynamicResource PrimaryTextColor}" />
-                            <Label Text="{Binding Mobile}" FontSize="14" />
-                            <Label Text="{Binding Email}" FontSize="14" />
+                            <Label Text="{Binding CustomerName}" FontSize="16" FontAttributes="Bold"/>
+                            <Label Text="{Binding Mobile}" FontSize="14"/>
+                            <Label Text="{Binding Email}" FontSize="14"/>
                         </VerticalStackLayout>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        
-        <Frame x:Name="detailFrame" Grid.Row="2" CornerRadius="10" Padding="15"
-               BackgroundColor="{DynamicResource CardBackgroundColor}" IsVisible="False">
-            <VerticalStackLayout Spacing="8">
-                <Label x:Name="detailName" FontSize="18" FontAttributes="Bold" />
-                <Label x:Name="detailMobile" />
-                <Label x:Name="detailEmail" />
-                <Label x:Name="detailAddress" />
-                <Label x:Name="detailCityPostal" />
-                <Frame CornerRadius="5" BackgroundColor="#F0F0F0" Padding="10" IsVisible="{Binding Source={x:Reference detailNotes}, Path=Text.Length}">
-                    <Label x:Name="detailNotes" />
-                </Frame>
-
-                <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
-                    <Button x:Name="editDetailButton" Text="Edytuj" Grid.Column="0"
-                            Clicked="EditDetailButton_Clicked"
-                            BackgroundColor="{DynamicResource PrimaryColor}" TextColor="White" CornerRadius="5" />
-                    <Button x:Name="deleteDetailButton" Text="Usuń" Grid.Column="1"
-                            Clicked="DeleteDetailButton_Clicked"
-                            BackgroundColor="Red" TextColor="White" CornerRadius="5" />
-                </Grid>
-            </VerticalStackLayout>
-        </Frame>
-
+        <Button Grid.Row="1" Text="+" FontSize="24" WidthRequest="60" HeightRequest="60" 
+                CornerRadius="30" Margin="0,0,20,20" HorizontalOptions="End" VerticalOptions="End"
+                Command="{Binding AddNewContactCommand}"/>
     </Grid>
 </ContentPage>

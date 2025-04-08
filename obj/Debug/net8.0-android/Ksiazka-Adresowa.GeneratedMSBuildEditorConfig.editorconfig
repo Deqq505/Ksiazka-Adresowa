@@ -30,6 +30,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = Ksiazka_Adresowa.AppShell.
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
+[/Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/ContactDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ksiazka_Adresowa.ContactDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ContactDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ContactDetailPage.xaml
+
+[/Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/EditContactPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ksiazka_Adresowa.EditContactPage.xaml
+build_metadata.AdditionalFiles.TargetPath = EditContactPage.xaml
+build_metadata.AdditionalFiles.RelativePath = EditContactPage.xaml
+
 [/Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Ksiazka_Adresowa.MainPage.xaml
