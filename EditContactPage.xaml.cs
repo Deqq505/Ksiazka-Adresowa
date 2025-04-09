@@ -1,9 +1,14 @@
+using System.Text.RegularExpressions;
+
 namespace Ksiazka_Adresowa;
 
+[QueryProperty(nameof(CustomerId), "id")]
 public partial class EditContactPage : ContentPage
 {
     private readonly LocalDbService _dbService;
     private Customer _customer;
+
+    public string CustomerId { get; set; }
 
     public EditContactPage(LocalDbService dbService)
     {
@@ -16,21 +21,24 @@ public partial class EditContactPage : ContentPage
     {
         base.OnAppearing();
 
-        if (Shell.Current.CurrentState.Location.OriginalString.Contains("id="))
+        
+        if (string.IsNullOrWhiteSpace(CustomerId) || !int.TryParse(CustomerId, out int id))
         {
-            var idString = Shell.Current.CurrentState.Location.OriginalString.Split('=')[1];
-            if (int.TryParse(idString, out int id))
-            {
-                _customer = await _dbService.GetById(id);
-                Title = "Edytuj kontakt";
-            }
+            Title = "Dodaj kontakt"; 
+            return;
+        }
+
+        _customer = await _dbService.GetById(id);
+        if (_customer != null)
+        {
+            Title = "Edytuj kontakt";
+            LoadCustomerData();
         }
         else
         {
-            Title = "Dodaj kontakt";
+            await DisplayAlert("Błąd", "Nie znaleziono kontaktu do edytowania", "OK");
+            await Shell.Current.GoToAsync("..");
         }
-
-        LoadCustomerData();
     }
 
     private void LoadCustomerData()
@@ -44,11 +52,45 @@ public partial class EditContactPage : ContentPage
         notesEntryField.Text = _customer.Notes;
     }
 
+    private bool IsValidEmail(string email) => Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+
+    private bool IsValidPostalCode(string postalCode) => Regex.IsMatch(postalCode, @"^\d{2}-\d{3}$");
+
+    private bool IsValidMobile(string mobile) => Regex.IsMatch(mobile, @"^\d{3}-\d{3}-\d{3}$");
+
+    private void OnFieldChanged(object sender, TextChangedEventArgs e)
+    {
+        nameErrorLabel.IsVisible = string.IsNullOrWhiteSpace(nameEntryField.Text);
+        nameErrorLabel.Text = "Imię i nazwisko nie może być puste";
+
+        emailErrorLabel.IsVisible = !string.IsNullOrWhiteSpace(emailEntryField.Text) && !IsValidEmail(emailEntryField.Text);
+        emailErrorLabel.Text = "Nieprawidłowy email (np. test@domena.pl)";
+
+        mobileErrorLabel.IsVisible = string.IsNullOrWhiteSpace(mobileEntryField.Text) || !IsValidMobile(mobileEntryField.Text);
+        mobileErrorLabel.Text = "Telefon musi być w formacie 123-456-789";
+
+        bool addressFilled = !string.IsNullOrWhiteSpace(addressEntryField.Text);
+        addressErrorLabel.IsVisible = false;
+        cityErrorLabel.IsVisible = false;
+        postalCodeErrorLabel.IsVisible = false;
+
+        if (addressFilled)
+        {
+            cityErrorLabel.IsVisible = string.IsNullOrWhiteSpace(cityEntryField.Text);
+            cityErrorLabel.Text = "Miasto jest wymagane";
+
+            postalCodeErrorLabel.IsVisible = string.IsNullOrWhiteSpace(postalCodeEntryField.Text) || !IsValidPostalCode(postalCodeEntryField.Text);
+            postalCodeErrorLabel.Text = "Kod pocztowy w formacie xx-xxx";
+        }
+    }
+
     private async void OnSaveClicked(object sender, EventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(nameEntryField.Text) || string.IsNullOrWhiteSpace(mobileEntryField.Text))
+        OnFieldChanged(null, null);
+
+        if (nameErrorLabel.IsVisible || emailErrorLabel.IsVisible || mobileErrorLabel.IsVisible || addressErrorLabel.IsVisible || cityErrorLabel.IsVisible || postalCodeErrorLabel.IsVisible)
         {
-            await DisplayAlert("Błąd", "Imię i nazwisko oraz telefon są wymagane!", "OK");
+            await DisplayAlert("Błąd", "Popraw błędy w formularzu", "OK");
             return;
         }
 

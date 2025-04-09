@@ -6,12 +6,13 @@
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
+
             <Label x:Name="detailName" FontSize="20" FontAttributes="Bold"/>
             <Label x:Name="detailMobile"/>
             <Label x:Name="detailEmail"/>
             <Label x:Name="detailAddress"/>
             <Label x:Name="detailCityPostal"/>
-            
+
             <Frame IsVisible="{Binding Source={x:Reference detailNotes}, Path=Text.Length}" 
                    CornerRadius="5" Padding="10">
                 <Label x:Name="detailNotes"/>
@@ -21,6 +22,7 @@
                 <Button Text="Edytuj" Clicked="OnEditClicked"/>
                 <Button Text="Usuń" Clicked="OnDeleteClicked" Grid.Column="1"/>
             </Grid>
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

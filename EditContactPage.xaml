@@ -6,18 +6,27 @@
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
-            <Entry x:Name="nameEntryField" Placeholder="Imię i nazwisko*" />
-            <Entry x:Name="emailEntryField" Placeholder="Email" Keyboard="Email" />
-            <Entry x:Name="mobileEntryField" Placeholder="Telefon*" Keyboard="Telephone" />
-            <Entry x:Name="addressEntryField" Placeholder="Adres" />
-            
-            <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
-                <Entry x:Name="cityEntryField" Placeholder="Miasto" Grid.Column="0" />
-                <Entry x:Name="postalCodeEntryField" Placeholder="Kod pocztowy" Grid.Column="1" />
-            </Grid>
-            
+
+            <Entry x:Name="nameEntryField" Placeholder="Imię i nazwisko*" TextChanged="OnFieldChanged" />
+            <Label x:Name="nameErrorLabel" TextColor="Red" IsVisible="False" FontSize="12"/>
+
+            <Entry x:Name="emailEntryField" Placeholder="Email" Keyboard="Email" TextChanged="OnFieldChanged" />
+            <Label x:Name="emailErrorLabel" TextColor="Red" IsVisible="False" FontSize="12"/>
+
+            <Entry x:Name="mobileEntryField" Placeholder="Telefon* (123-456-789)" Keyboard="Telephone" TextChanged="OnFieldChanged" />
+            <Label x:Name="mobileErrorLabel" TextColor="Red" IsVisible="False" FontSize="12"/>
+
+            <Entry x:Name="addressEntryField" Placeholder="Adres" TextChanged="OnFieldChanged" />
+            <Label x:Name="addressErrorLabel" TextColor="Red" IsVisible="False" FontSize="12"/>
+
+            <Entry x:Name="cityEntryField" Placeholder="Miasto" TextChanged="OnFieldChanged"/>
+            <Label x:Name="cityErrorLabel" TextColor="Red" IsVisible="False" FontSize="12"/>
+
+            <Entry x:Name="postalCodeEntryField" Placeholder="Kod pocztowy" TextChanged="OnFieldChanged"/>
+            <Label x:Name="postalCodeErrorLabel" TextColor="Red" IsVisible="False" FontSize="12"/>
+
             <Editor x:Name="notesEntryField" Placeholder="Notatki" AutoSize="TextChanges" MinimumHeightRequest="100" />
-            
+
             <Button Text="Zapisz" Clicked="OnSaveClicked" />
         </VerticalStackLayout>
     </ScrollView>
