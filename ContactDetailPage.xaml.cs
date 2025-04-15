@@ -1,4 +1,5 @@
 using Ksiazka_Adresowa;
+using CommunityToolkit.Maui.Alerts;
 
 namespace Ksiazka_Adresowa;
 
@@ -24,7 +25,7 @@ public partial class ContactDetailPage : ContentPage
         {
             if (string.IsNullOrWhiteSpace(CustomerId) || !int.TryParse(CustomerId, out int id))
             {
-                await DisplayAlert("Błąd", "Brak identyfikatora kontaktu.", "OK");
+                await Toast.Make("Brak identyfikatora kontaktu").Show();
                 await Shell.Current.GoToAsync("..");
                 return;
             }
@@ -33,7 +34,7 @@ public partial class ContactDetailPage : ContentPage
 
             if (_customer == null)
             {
-                await DisplayAlert("Błąd", "Nie znaleziono kontaktu.", "OK");
+                await Toast.Make("Nie znaleziono kontaktu").Show();
                 await Shell.Current.GoToAsync("..");
                 return;
             }
@@ -47,7 +48,7 @@ public partial class ContactDetailPage : ContentPage
         }
         catch (Exception ex)
         {
-            await DisplayAlert("Błąd", $"Coś poszło nie tak: {ex.Message}", "OK");
+            await Toast.Make($"Coś poszło nie tak: {ex.Message}").Show();
             await Shell.Current.GoToAsync("..");
         }
     }
@@ -69,7 +70,7 @@ public partial class ContactDetailPage : ContentPage
         if (confirm)
         {
             await _dbService.Delete(_customer);
-            await DisplayAlert("Sukces", "Kontakt został usunięty", "OK");
+            await Toast.Make("Kontakt został usunięty").Show();
             await Shell.Current.GoToAsync("..");
         }
     }

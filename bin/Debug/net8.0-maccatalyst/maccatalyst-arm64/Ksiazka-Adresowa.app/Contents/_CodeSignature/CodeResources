@@ -47,18 +47,32 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>MonoBundle/CommunityToolkit.Maui.Core.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xzWWBEvR1TK67IbeUXw9qe+tT5IK5rq0uQvkq5BLIL8=
+			</data>
+		</dict>
+		<key>MonoBundle/CommunityToolkit.Maui.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Qsoas+yvVL7AcJAMDDsiSYfEU/GZjSdXxxAeyx8GDtg=
+			</data>
+		</dict>
 		<key>MonoBundle/Ksiazka-Adresowa.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uj90LwUlxw+j8OhZ+34MkBAn+Zu4PWpcIa35i0HVQJM=
+			gMxTWKl75RwU+LgJciONj0jUxcKvR/2ohRqtuFKAqRU=
 			</data>
 		</dict>
 		<key>MonoBundle/Ksiazka-Adresowa.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6wuI7vgppaC4aMBfA5aXWCzP/B2kCKk/8rJIZZEsAIY=
+			VdZ1yCMi0odjySpKD4ELl/qtikghz3Eal8cFTKGfZHw=
 			</data>
 		</dict>
 		<key>MonoBundle/Microsoft.CSharp.dll</key>
@@ -1381,7 +1395,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2agwnRHiOp13vv5MkretxvO+DCvli6jTf6GAeKcjPQM=
+			1O/ek7nuZ0/tg6rimBiYql5JTvu5BrOawtepED5o7CY=
 			</data>
 		</dict>
 		<key>MonoBundle/ar/Microsoft.Maui.Controls.resources.dll</key>

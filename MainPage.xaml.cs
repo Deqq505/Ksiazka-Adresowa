@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+using CommunityToolkit.Maui.Alerts;
 
 namespace Ksiazka_Adresowa;
 
@@ -32,7 +33,7 @@ public partial class MainPage : ContentPage
         }
         catch (Exception ex)
         {
-            await DisplayAlert("Błąd", $"Nie można załadować kontaktów: {ex.Message}", "OK");
+            await Toast.Make($"Nie można załadować kontaktów: {ex.Message}").Show();
         }
     }
 }

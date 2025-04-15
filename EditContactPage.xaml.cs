@@ -1,4 +1,5 @@
 using System.Text.RegularExpressions;
+using CommunityToolkit.Maui.Alerts;
 
 namespace Ksiazka_Adresowa;
 
@@ -21,7 +22,6 @@ public partial class EditContactPage : ContentPage
     {
         base.OnAppearing();
 
-        
         if (string.IsNullOrWhiteSpace(CustomerId) || !int.TryParse(CustomerId, out int id))
         {
             Title = "Dodaj kontakt"; 
@@ -36,7 +36,7 @@ public partial class EditContactPage : ContentPage
         }
         else
         {
-            await DisplayAlert("Błąd", "Nie znaleziono kontaktu do edytowania", "OK");
+            await Toast.Make("Nie znaleziono kontaktu do edytowania").Show();
             await Shell.Current.GoToAsync("..");
         }
     }
@@ -90,7 +90,7 @@ public partial class EditContactPage : ContentPage
 
         if (nameErrorLabel.IsVisible || emailErrorLabel.IsVisible || mobileErrorLabel.IsVisible || addressErrorLabel.IsVisible || cityErrorLabel.IsVisible || postalCodeErrorLabel.IsVisible)
         {
-            await DisplayAlert("Błąd", "Popraw błędy w formularzu", "OK");
+            await Toast.Make("Popraw błędy w formularzu").Show();
             return;
         }
 
@@ -105,12 +105,12 @@ public partial class EditContactPage : ContentPage
         if (_customer.Id == 0)
         {
             await _dbService.Create(_customer);
-            await DisplayAlert("Sukces", "Kontakt został dodany", "OK");
+            await Toast.Make("Kontakt został dodany").Show();
         }
         else
         {
             await _dbService.Update(_customer);
-            await DisplayAlert("Sukces", "Kontakt został zaktualizowany", "OK");
+            await Toast.Make("Kontakt został zaktualizowany").Show();
         }
 
         await Shell.Current.GoToAsync("..");

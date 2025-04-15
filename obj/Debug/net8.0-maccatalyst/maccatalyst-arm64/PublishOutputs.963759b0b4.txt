@@ -34,6 +34,8 @@
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Ksiazka-Adresowa.app/Contents/MonoBundle/zh-Hans/Microsoft.Maui.Controls.resources.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Ksiazka-Adresowa.app/Contents/MonoBundle/zh-Hant/Microsoft.Maui.Controls.resources.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Ksiazka-Adresowa.app/Contents/MonoBundle/runtimeconfig.bin
+/Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Ksiazka-Adresowa.app/Contents/MonoBundle/CommunityToolkit.Maui.dll
+/Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Ksiazka-Adresowa.app/Contents/MonoBundle/CommunityToolkit.Maui.Core.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Ksiazka-Adresowa.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Ksiazka-Adresowa.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.Abstractions.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Ksiazka-Adresowa.app/Contents/MonoBundle/Microsoft.Extensions.DependencyInjection.dll

@@ -34,6 +34,8 @@
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/zh-Hans/Microsoft.Maui.Controls.resources.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/zh-Hant/Microsoft.Maui.Controls.resources.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/runtimeconfig.bin
+/Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/CommunityToolkit.Maui.dll
+/Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/CommunityToolkit.Maui.Core.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/Microsoft.Extensions.Configuration.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/Microsoft.Extensions.Configuration.Abstractions.dll
 /Users/godziekw/RiderProjects/Ksiazka-Adresowa/Ksiazka-Adresowa/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Ksiazka-Adresowa.app/Microsoft.Extensions.DependencyInjection.dll
